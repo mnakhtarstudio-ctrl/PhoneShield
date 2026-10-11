@@ -35,3 +35,8 @@ gradle :app:assembleDebug
 ## Privacy design in the supplied source
 
 The app does not implement accounts, analytics, or a remote backend. The breach checker contacts `api.pwnedpasswords.com`; the DNS service contacts Quad9 over HTTPS. Android system services are queried locally for the device checkup and app-permission audit.
+
+## v0.2: Assistant and auto-manager
+
+- **Offline assistant:** a keyword-rule chat that explains your score, what to fix first, risky apps and more. No AI model, no network.
+- **Auto-manager:** a WorkManager job rescans about every 12 hours and notifies only about NEW failing checks or NEW apps with sensitive access. The first scan only sets a baseline.
